@@ -10,7 +10,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   Bloc.observer = SimpleBlocObserver();
-  await Hive.openBox("Notes Box");
+  await Hive.openBox<NoteModel>("Notes Box");
   Hive.registerAdapter(NoteModelAdapter());
   runApp(const NotesApp());
 }
