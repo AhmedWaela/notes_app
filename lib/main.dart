@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/core/utils/simple_bloc_observer.dart';
 import 'package:notes_app/features/data/models/note_model.dart';
-import 'package:notes_app/features/presentation/manager/add_note_cubit.dart';
 import 'package:notes_app/features/presentation/views/notes_view.dart';
 
 Future<void> main() async {
