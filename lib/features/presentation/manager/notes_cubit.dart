@@ -5,6 +5,7 @@ import 'package:notes_app/features/data/models/note_model.dart';
 class NotesCubit extends Cubit<NoteState> {
   NotesCubit() : super(NoteInitial());
   List<NoteModel>? notes;
+
   fetchAllNotes() {
     var note = Hive.box<NoteModel>("Notes Box");
 
