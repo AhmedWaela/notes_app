@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/core/constants/constants.dart';
 import 'package:notes_app/features/presentation/manager/add_note_cubit.dart';
 
 class ColorItem extends StatelessWidget {
@@ -36,12 +37,7 @@ class ColorsListView extends StatefulWidget {
 
 class _ColorsListViewState extends State<ColorsListView> {
   int currentIndex = 0;
-  List<Color> colors = [
-    Colors.red,
-    Colors.yellow,
-    Colors.blueGrey,
-    Colors.blue
-  ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
