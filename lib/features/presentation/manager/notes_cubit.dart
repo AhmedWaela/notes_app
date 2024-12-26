@@ -9,9 +9,12 @@ class NotesCubit extends Cubit<NoteState> {
     var note = Hive.box<NoteModel>("Notes Box");
 
     notes = note.values.toList();
+    emit(NoteSuccess());
   }
 }
 
 sealed class NoteState {}
 
 class NoteInitial extends NoteState {}
+
+class NoteSuccess extends NoteState {}

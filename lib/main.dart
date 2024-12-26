@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/core/utils/simple_bloc_observer.dart';
 import 'package:notes_app/features/data/models/note_model.dart';
+import 'package:notes_app/features/presentation/manager/notes_cubit.dart';
 import 'package:notes_app/features/presentation/views/notes_view.dart';
 
 Future<void> main() async {
@@ -20,10 +21,13 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: "Poppins"),
-      debugShowCheckedModeBanner: false,
-      home: NotesView(),
+    return BlocProvider(
+      create: (context) => NotesCubit(),
+      child: MaterialApp(
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: "Poppins"),
+        debugShowCheckedModeBanner: false,
+        home: NotesView(),
+      ),
     );
   }
 }
